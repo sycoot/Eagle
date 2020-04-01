@@ -147,7 +147,7 @@ main {
         grid-template-areas: 
             "about spångaMacka specialMacka"
             "about pizza specialpizza"
-            "pp mexpiz sal";
+            "pp sal mexpiz";
         @media @tablet {
             width: calc((@width * 2) + (@margin * 4));
             grid-template-columns: auto auto;
@@ -225,8 +225,21 @@ main {
                 grid-area: specialMacka;
                 background-image: url("/./.images/p2.jpg");
                 background-size: cover;
+                background-size: cover;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -o-background-clip: text;
+                -moz-background-clip: text;
+                color: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h1 {
+                    font-size: 92px;
+                }
             }
             &#pizza {
+                font-family: RW-s;
                 grid-area: pizza;
                 background-image: url("/./.images/p7.jpg");
                 background-size: cover;
@@ -235,6 +248,12 @@ main {
                 -o-background-clip: text;
                 -moz-background-clip: text;
                 color: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h1 {
+                    font-size: 92px;
+                }
             }
             &#specialpizza {
                 grid-area: specialpizza;
@@ -243,19 +262,30 @@ main {
             }
             &#pp {
                 grid-area: pp;
-                background-color: whitesmoke;
+                background-image: url("/./.images/p4.jpg");
                 background-size: cover;
-                color: black;
             }
             &#mexpiz {
                 grid-area: mexpiz;
-                background-color: whitesmoke;
+                background-image: url("/./.images/p6.jpg");
                 background-size: cover;
-                color: black;
+                background-size: cover;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -o-background-clip: text;
+                -moz-background-clip: text;
+                color: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h1 {
+                    font-size: 98px;
+                    text-align: center;
+                }
             }
             &#sal {
                 grid-area: sal;
-                background-image: url("/./.images/p6.jpg");
+                background-image: url("/./.images/p5.jpg");
                 background-size: cover;
             }
             &#about {
