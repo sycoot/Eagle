@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Spångamacka">
+    <meta name="theme-color">
     <link rel="stylesheet" href="/./.styles/style.css">
     <script defer src="/./.scripts/script.js"></script>
     <title>Markitektur</title>
 </head>
 <body>
-    <button class="navbar" onclick="openMenu()">
+    <button class="navbar" onclick="openMenu()" aria-label="Open menu">
         <svg width="32" height="32" viewBox="0 0 24 24">
             <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
         </svg>
     </button>
     <nav id="menu">
-        <button class="navbar" onclick="openMenu()">
+        <button class="navbar" onclick="openMenu()" aria-label="Close menu">
             <svg id="close" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                 <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
             </svg>

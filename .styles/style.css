@@ -284,6 +284,11 @@ main section article#mexpiz h1 {
   font-size: 98px;
   text-align: center;
 }
+@media (max-width: 767px) {
+  main section article#mexpiz h1 {
+    font-size: 64px;
+  }
+}
 main section article#sal {
   grid-area: sal;
   background-image: url("/.images/p5.jpg");
