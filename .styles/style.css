@@ -13,6 +13,7 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 button.navbar {
   position: fixed;
@@ -38,10 +39,10 @@ nav#menu {
   background-color: #240023;
   z-index: 200;
   height: 100%;
-  width: 100%;
-  flex-direction: row;
+  width: 440px;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   transition: right 0.3s;
   -moz-transition: right 0.3s;
   -webkit-transition: right 0.3s;
@@ -62,7 +63,13 @@ nav#menu div {
   margin: 24px;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
+  color: white;
+}
+nav#menu div h2 {
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+  border-bottom: solid 2px white;
 }
 nav#menu div input[type=button] {
   margin-top: 6px;
@@ -82,7 +89,7 @@ nav#menu div input[type=button]:focus {
 }
 @media (max-width: 767px) {
   nav#menu {
-    flex-direction: column;
+    width: 100%;
   }
 }
 span#overlay {
@@ -121,5 +128,111 @@ header div h3 {
 @media (max-width: 767px) {
   header {
     flex-direction: column;
+  }
+}
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+main section {
+  font-family: RW-r;
+  height: auto;
+  width: calc((292px * 3) + (12px * 6));
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "about spångaMacka specialMacka" "about pizza specialpizza" "pp mexpiz sal";
+}
+@media (max-width: 991px) {
+  main section {
+    width: calc((292px * 2) + (12px * 4));
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: "about about" "spångaMacka specialMacka" "pizza specialpizza" "pp mexpiz" "sal .";
+  }
+}
+@media (max-width: 631px) {
+  main section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+main section article {
+  position: relative;
+  grid-area: spm;
+  margin: 12px;
+  background: orange;
+  height: 244px;
+  width: 292px;
+}
+main section article h2 {
+  margin: 8px 14px 2px 14px;
+  margin-bottom: 2px;
+}
+main section article p {
+  padding-top: 6px;
+  border-top: solid 1px black;
+  margin: 6px 12px 6px 12px;
+}
+main section article p#tel {
+  border: none;
+  font-family: RW-s;
+  width: 268px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+main section article#spångaMacka {
+  grid-area: spångaMacka;
+}
+main section article#specialMacka {
+  grid-area: specialMacka;
+}
+main section article#pizza {
+  grid-area: pizza;
+}
+main section article#specialpizza {
+  grid-area: specialpizza;
+}
+main section article#pp {
+  grid-area: pp;
+}
+main section article#mexpiz {
+  grid-area: mexpiz;
+}
+main section article#sal {
+  grid-area: sal;
+}
+main section article#about {
+  grid-area: about;
+  height: calc((244px * 2) + (2 * 12px));
+}
+@media (max-width: 991px) {
+  main section article#about {
+    height: 244px;
+    width: calc((292px * 2) + (2 * 12px));
+  }
+}
+@media (max-width: 631px) {
+  main section article#about {
+    height: calc((244px * 2) + (2 * 12px));
+    min-width: 292px;
+    width: 92%;
+    height: auto;
+  }
+}
+@media (max-width: 631px) {
+  main section article {
+    width: 92%;
+    min-height: 122px;
+    height: auto;
+    min-width: 200px;
   }
 }

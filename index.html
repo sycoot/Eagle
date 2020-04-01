@@ -6,7 +6,7 @@
     <meta name="description" content="Spångamacka">
     <link rel="stylesheet" href="/./.styles/style.css">
     <script defer src="/./.scripts/script.js"></script>
-    <title>Document</title>
+    <title>Spångamacka</title>
 </head>
 <body>
     <button class="navbar" onclick="openMenu()">
@@ -30,9 +30,9 @@
             </g>
         </svg>
         <div>
-            <input type="button" value="Hem" onclick="openMenu()">
-            <input type="button" value="Om oss" onclick="openMenu()">
-            <input type="button" value="Meny" onclick="openMenu()">
+            <h2>Navigation</h2>
+            <input type="button" value="[ Hem ]" onclick="openMenu()" >
+            <input type="button" value="[ Meny ]" onclick="scrollToMain();openMenu()">
         </div>
     </nav>
     <span id="overlay"></span>
@@ -53,18 +53,48 @@
         </div>
         
     </header>
-    <section class="about">
-        <h2>Spångamackan</h2>
-        <p>I hjärtat av Spånga bakas pizzor och mackor som folk runt världen drömmer om. Lorem ipsum dolor, 
-            sit amet consectetur adipisicing elit. Necessitatibus quasi asperiores laborum. Excepturi optio, 
-            illum, consequuntur accusamus iure facilis neque ipsum vel amet fugiat cum corporis ratione mollitia sed assumenda? Lorem ipsum dolor sit amet, 
-            consectetur adipisicing elit. Praesentium corporis optio recusandae magni officia nihil ipsa quas? Laborum eum, quia ipsum dolore, 
-            eligendi rem saepe suscipit reprehenderit assumenda quod ad.</p>
-        <p>Ni hittar oss: Spånga Kyrkväg 413</p>
-    </section>
-    <section class="menu">
-        <article></article>
-    </section>
+    <main>
+        <section>
+            <article id="about">
+                <h2>Om Oss</h2>
+                <p>I hjärtat av Spånga bakas pizzor och mackor som folk runt världen drömmer om. Lorem ipsum dolor, 
+                    sit amet consectetur adipisicing elit. Necessitatibus quasi asperiores laborum. Excepturi optio, 
+                    illum, consequuntur accusamus iure facilis neque ipsum vel amet fugiat cum corporis ratione mollitia sed assumenda? Lorem ipsum dolor sit amet, 
+                    consectetur adipisicing elit. Praesentium corporis optio recusandae magni officia nihil ipsa quas? Laborum eum, quia ipsum dolore, 
+                    eligendi rem saepe suscipit reprehenderit assumenda quod ad.</p>
+                <p id="tel"><span>Ni hittar oss:</span><span><b><i>Spånga Kyrkväg 4</i></b><span></p>
+            </article>
+            <article id="spångaMacka">
+                <h2>Title</h2>
+                <p>e</p>
+            </article>
+            <article id="specialMacka">
+                <h2>Title</h2>
+                <p>e</p>
+            </article>
+            <article id="pizza">
+                <h2>Title</h2>
+                <p>e</p>
+            </article>
+            <article id="specialpizza">
+                <h2>Title</h2>
+                <p>e</p>
+            </article>
+            <article id="pp">
+                <h2>Title</h2>
+                <p>e</p>
+            </article>
+            <article id="mexpiz">
+                <h2>Title</h2>
+                <p>e</p>
+            </article>
+            <article id="sal">
+                <h2>Title</h2>
+                <p>e</p>
+            </article>
+            
+        </section>
+    </main>
     <footer>
 
     </footer>
