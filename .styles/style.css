@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'RW-r';
+  src: url('Raleway-Regular.ttf');
+}
+@font-face {
+  font-family: 'RW-s';
+  src: url('Raleway-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'RW-l';
+  src: url('Raleway-Light.ttf');
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+span#menu {
+  display: none;
+  position: fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), transparent;
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+}
+header {
+  font-family: RW-r;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+header svg {
+  clip-path: circle(144px);
+}
+header svg:hover {
+  transform: scale(1.04);
+}
+header div {
+  margin: 24px;
+}
+header div h1 {
+  font-size: 36px;
+}
+header div h2 {
+  font-family: RW-l;
+}
+header div h3 {
+  margin-top: 8px;
+  color: #c7332c;
+}
+@media (max-width: 767px) {
+  header {
+    flex-direction: column;
+  }
+}

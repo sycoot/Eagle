@@ -1,0 +1,56 @@
+@tablet: ~'(max-width: 991px)';
+@phone: ~'(max-width: 767px)';
+
+.font-face(@font-family, @filepath){
+    @font-face {
+        font-family: @font-family;
+        src: url('@{filepath}.ttf');
+    }
+}
+.font-face('RW-r', 'Raleway-Regular');
+.font-face('RW-s', 'Raleway-SemiBold');
+.font-face('RW-l', 'Raleway-Light');
+* {
+    margin: 0;
+    padding: 0;
+}
+span#menu {
+    display: none;
+    position: fixed;
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), transparent;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+}
+header {
+    font-family: RW-r;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    svg {
+        clip-path: circle(144px);
+        &:hover {
+            transform: scale(1.04);
+        }
+    }
+    div {
+        margin: 24px;
+        h1 {
+            font-size: 36px;
+        }
+        h2 {
+            font-family: RW-l;
+        }
+        h3 {
+            margin-top: 8px;
+            color: #c7332c
+        }
+    }
+    @media @phone {
+        flex-direction: column;
+    }
+    
+}
