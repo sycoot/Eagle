@@ -93,12 +93,16 @@ nav#menu div input[type=button]:focus {
   }
 }
 span#overlay {
-  display: none;
+  left: -100%;
   position: fixed;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), transparent;
   z-index: 100;
   height: 100%;
   width: 100%;
+  transition: left 0.2s;
+  -moz-transition: left 0.2s;
+  -webkit-transition: left 0.2s;
+  -o-transition: left 0.2s;
 }
 header {
   font-family: RW-r;
@@ -235,4 +239,21 @@ main section article#about {
     height: auto;
     min-width: 200px;
   }
+}
+footer {
+  width: 100%;
+  padding: 42px 0px;
+  background: #242323;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: RW-l;
+  color: white;
+}
+footer h4 {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+footer h5 {
+  font-size: 10px;
 }
