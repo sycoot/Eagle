@@ -17,6 +17,7 @@
     scroll-behavior: smooth;
 }
 button.navbar {
+    z-index: 150;
     position: fixed;
     top: 0;
     right: 0;
@@ -32,6 +33,7 @@ button.navbar {
     }
 }
 nav#menu {
+    box-shadow: -5px 0px 5px rgb(24, 23, 23);
     font-family: RW-l;
     right: -100%;
     display: flex;
@@ -158,6 +160,7 @@ main {
             "sal ."
         }
         @media @sPhone {
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -167,7 +170,22 @@ main {
             position: relative;
             grid-area: spm;
             margin: @margin;
-            background: orange;
+            background: whitesmoke;
+            border: solid 1px rgba(36, 35, 35, 0.35);
+            border-radius: 3px;
+            color: white;
+            filter: saturate(30%);
+            -webkit-filter: saturate(30%);
+            -moz-filter: saturate(30%);
+            -o-filter: saturate(30%);
+            &:hover {
+                box-shadow: 0px 6px 5px rgba(36, 35, 35, 0.92);
+                translate: 0px -4px;
+                filter: saturate(100%);
+                -webkit-filter: saturate(100%);
+                -moz-filter: saturate(100%);
+                -o-filter: saturate(100%);
+            }
             height: @height;
             width: @width;
             h2 {
@@ -178,39 +196,70 @@ main {
                 padding-top: 6px;
                 border-top: solid 1px black;
                 margin: 6px 12px 6px 12px;
-                &#tel {
+            }
+            div#tel {
+                width: @width;
+                position: absolute;
+                bottom: 0;
+                margin-bottom: 16px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                p {
+                    display: inline;
+                    margin: 0px 12px;
+                    width: auto;
+                    font-size: 14px;
+                    border-top: n;
                     border: none;
                     font-family: RW-s;
-                    width: @width - 24px;
-                    position: absolute;
-                    bottom: 0;
-                    margin-bottom: 16px;
-                    display: flex;
-                    justify-content: space-between;
                 }
             }
             &#spångaMacka {
                 grid-area: spångaMacka;
+            
+                background-image: url("/./.images/p1.jpg");
+                background-size: cover;
             }
             &#specialMacka {
                 grid-area: specialMacka;
+                background-image: url("/./.images/p2.jpg");
+                background-size: cover;
             }
             &#pizza {
                 grid-area: pizza;
+                background-image: url("/./.images/p7.jpg");
+                background-size: cover;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -o-background-clip: text;
+                -moz-background-clip: text;
+                color: transparent;
             }
             &#specialpizza {
                 grid-area: specialpizza;
+                background-image: url("/./.images/p3.jpg");
+                background-size: cover;
             }
             &#pp {
                 grid-area: pp;
+                background-color: whitesmoke;
+                background-size: cover;
+                color: black;
             }
             &#mexpiz {
                 grid-area: mexpiz;
+                background-color: whitesmoke;
+                background-size: cover;
+                color: black;
             }
             &#sal {
                 grid-area: sal;
+                background-image: url("/./.images/p6.jpg");
+                background-size: cover;
             }
             &#about {
+                color: black;
                 grid-area: about;
                 height: calc((@height * 2) + (2 * @margin));
                 @media @tablet {
@@ -224,16 +273,26 @@ main {
                     height: auto;
                 }
             }
+            @media @tablet {
+                div#tel {
+                    width: 2 * @width;
+                }
+            }
             @media @sPhone {
                 width: 92%;
                 min-height: @height / 2;
                 height: auto;
                 min-width: 200px;
+                    div#tel {
+                        width: inherit;
+                        position: relative;
+                    }
             }
         }
     }
 }
 footer {
+    margin-top: @margin;
     width: 100%;
     padding: 42px 0px;
     background: rgb(36, 35, 35);
