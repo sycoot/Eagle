@@ -14,7 +14,78 @@
   margin: 0;
   padding: 0;
 }
-span#menu {
+button.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 16px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+button.navbar:hover,
+button.navbar:focus {
+  fill: #c7332c;
+}
+nav#menu {
+  font-family: RW-l;
+  right: -100%;
+  display: flex;
+  position: fixed;
+  background-color: #240023;
+  z-index: 200;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.3s;
+  -moz-transition: right 0.3s;
+  -webkit-transition: right 0.3s;
+  -o-transition: right 0.3s;
+}
+nav#menu button.navbar {
+  fill: white;
+  position: absolute;
+}
+nav#menu button.navbar:hover,
+nav#menu button.navbar:focus {
+  fill: #c7332c;
+}
+nav#menu svg {
+  clip-path: circle(92px);
+}
+nav#menu div {
+  margin: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+nav#menu div input[type=button] {
+  margin-top: 6px;
+  color: white;
+  font-size: 24px;
+  background: transparent;
+  border: none;
+}
+nav#menu div input[type=button]:hover,
+nav#menu div input[type=button]:focus {
+  color: #c7332c;
+}
+@media (max-width: 767px) {
+  nav#menu div {
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  nav#menu {
+    flex-direction: column;
+  }
+}
+span#overlay {
   display: none;
   position: fixed;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), transparent;
@@ -33,9 +104,6 @@ header {
 }
 header svg {
   clip-path: circle(144px);
-}
-header svg:hover {
-  transform: scale(1.04);
 }
 header div {
   margin: 24px;
