@@ -21,16 +21,19 @@ button.navbar {
   top: 0;
   right: 0;
   margin: 16px;
-  background: transparent;
-  border: none;
+  border-radius: 3px;
+  border: solid 2px black;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 4px;
+  fill: black;
+  background: transparent;
 }
 button.navbar:hover,
 button.navbar:focus {
-  fill: #c7332c;
+  fill: #ff0000;
+  border: solid 2px #ff0000;
 }
 nav#menu {
   box-shadow: -5px 0px 5px #181717;
@@ -52,12 +55,16 @@ nav#menu {
   -ms-transition: right 0.3s;
 }
 nav#menu button.navbar {
-  fill: white;
+  border: solid 2px white;
+  padding: 8px;
   position: absolute;
+  fill: white;
 }
 nav#menu button.navbar:hover,
 nav#menu button.navbar:focus {
-  fill: #c7332c;
+  fill: #ff0000;
+  background: transparent;
+  border: solid 2px #ff0000;
 }
 nav#menu svg {
   clip-path: circle(92px);
@@ -126,6 +133,11 @@ header div {
 }
 header div h1 {
   font-size: 36px;
+  border-bottom: solid 3px transparent;
+  transition: border-bottom 0.3s;
+}
+header div h1:hover {
+  border-bottom: solid 3px #ff0000;
 }
 header div h2 {
   font-family: RW-l;

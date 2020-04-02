@@ -22,14 +22,17 @@ button.navbar {
     top: 0;
     right: 0;
     margin: 16px;
-    background: transparent;
-    border: none;
+    border-radius: 3px;
+    border: solid 2px black;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 4px;
+    fill: black;
+    background: transparent;
     &:hover, &:focus {
-        fill: #c7332c;
+        fill:#ff0000;
+        border: solid 2px #ff0000;
     }
 }
 nav#menu {
@@ -51,10 +54,14 @@ nav#menu {
     -o-transition: right 0.3s;
     -ms-transition: right 0.3s;
     button.navbar {
-        fill: white;
+        border: solid 2px white;
+        padding: 8px;
         position: absolute;
+        fill: white;
         &:hover, &:focus {
-            fill: #c7332c;
+            fill: #ff0000;
+            background: transparent;
+            border: solid 2px #ff0000;
         }
     }
     svg {
@@ -118,6 +125,11 @@ header {
         margin: 24px;
         h1 {
             font-size: 36px;
+            border-bottom: solid 3px transparent;
+            transition: border-bottom 0.3s;
+            &:hover {
+                border-bottom: solid 3px #ff0000;
+            }
         }
         h2 {
             font-family: RW-l;
