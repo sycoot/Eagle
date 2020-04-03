@@ -158,9 +158,9 @@ div#itemOverlay article {
   max-width: 368px;
   min-width: 188px;
   padding: 24px 16px;
-  max-height: 78%;
+  max-height: 64%;
   font-family: RW-r;
-  overflow: hidden;
+  overflow: scroll;
   background: white;
 }
 div#itemOverlay article h2 {
