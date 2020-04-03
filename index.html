@@ -10,11 +10,14 @@
     <title>Markitektur</title>
 </head>
 <body>
-    <button class="navbar" onclick="openMenu()" aria-label="Open menu">
-        <svg width="42" height="42" viewBox="0 0 24 24">
-            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-        </svg>
-    </button>
+    <div id="center">
+        <button class="navbar" onclick="openMenu()" aria-label="Open menu">
+            <svg width="42" height="42" viewBox="0 0 24 24">
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+            </svg>
+        </button>
+    </div>
+    
     <nav id="menu">
         <button class="navbar" onclick="openMenu()" aria-label="Close menu">
             <svg id="close" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
@@ -37,6 +40,17 @@
         </div>
     </nav>
     <span id="overlay"></span>
+    <div id="itemOverlay">
+        <button class="close" aria-label="Close item" onclick="DisplayItem()">
+            <svg id="close" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
+            </svg>
+        </button>
+        <article>
+            <h2 aria-label="Title">Title</h2>
+            <p aria-label="Paragraph"></p>
+        </article>
+    </div>
     <header>
         <svg width="288px" height="288px" version="1.1" viewBox="0.0 0.0 290.7795275590551 283.92913385826773" fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#p.0)">
@@ -48,7 +62,7 @@
             </g>
         </svg>
         <div>
-            <h1 onclick="scrollToMain()">Markitektur</h1>
+            <button onclick="scrollToMain()" aria-label="Scroll to display"><h1 class="focus">Markitektur</h1></button>
             <h2>Sann och evig design</h2>
             <h3>carl.chemnitz@elev.ga.ntig.se</h3>
         </div>
@@ -67,28 +81,28 @@
                     <p><b><i>Någon väg i stan</i></b></p>
                 </div>
             </article>
-            <article id="spångaMacka">
-            </article>
+            <button onclick="DisplayItem('Title', 'Nintendo 64? What happened to Nintendo 1, Nintendo 2, Nintendo 3, Nintendo 4, Nintendo 5, Nintendo 6, Nintendo 7, Nintendo 8, Nintendo 9, Nintendo 10, Nintendo 11, Nintendo 12, Nintendo 13, Nintendo 14, Nintendo 15, Nintendo 16, Nintendo 17, Nintendo 18, Nintendo 19, Nintendo 20, Nintendo 21, Nintendo 22, Nintendo 23, Nintendo 24, Nintendo 25, Nintendo 26, Nintendo 27, Nintendo 28, Nintendo 29 , Nintendo 30, Nintendo 31, Nintendo 32, Nintendo 33, Nintendo 34, Nintendo 35, Nintendo 36, Nintendo 37, Nintendo 38, Nintendo 39, Nintendo 40, Nintendo 41, Nintendo 42, Nintendo 43, Nintendo 44, Nintendo 45, Nintendo 46, Nintendo 47, Nintendo 48, Nintendo 49, Nintendo 50, Nintendo 51, Nintendo 52, Nintendo 53, Nintendo 54, Nintendo 55, Nintendo 56, Nintendo 57, Nintendo 58, Nintendo 59, Nintendo 60, Nintendo 61, Nintendo 62 and Nintendo 63? Like, what the fuck dude? They cheated us out of like, SIXTY consoles...');" id="spångaMacka" aria-label="Open item">
+            </button>
             <article id="specialMacka">
                 <h1>你好</h1>
             </article>
-            <article id="specialpizza">
-            </article>
-            <article id="pizza">
+            <button  onclick="DisplayItem('Title 2 right?', 'I had my first ride last night and im proud to report that a kindergarten has been neutralized with a pink mercedes benz')" id="specialpizza" aria-label="Open item">
+            </button>
+            <article id="pizza" >
                 <h1>Hello</h1>
             </article>
-            <article id="pp">
-            </article>
-            <article id="mexpiz">
+            <button onclick="DisplayItem('Titul Litus', 'Хочу, бля, сказать этому ёбаному Обэме, нахуй, блядь. Ебоманый, э, ёбаный ты козёл, нахуй. Черножопый, блядь! БЫЛ БЫ ТЫ ЧЕЛОВЕК, НАХУЙ, твою дочку ебут, нахуй, где-нибудь, нахуй, блядь. Она, наверное, учится хуй знает где, нахуй, блядь, а дети гибнут на у, на Украине, нахуй. Почему так, нахуй? Почему дети должны, они должны дети, эй, вечные дети, нахуй. Это наше будущее, нахуй. И хуле ты пиздишь, сука? Залупаешься, блядь! Ты живёшь где-то нна континенте хуй, те, знает где, блядь. Хуль ты сссюда лезешь? К русским, нахуй. Запомни. У меня есть, блядь, хороший, бля, человек. Я его, сука, блядь, отдам деньги, шоб те, сука, в мозгу въебал пулю, нахуй, и чтоб ты закрулся, нахуй, и никогда сюда не лез. Понял? Быдло ты ебаное, блядь!')" id="pp" aria-label="Open item">
+            </button>
+            <article id="mexpiz" >
                 <h1>여보세요</h1>
             </article>
-            <article id="sal">
-            </article>
+            <button onclick="DisplayItem('Cookie cake', 'Penguins are so adorable. I love how affectionate it is when the mother penguin feeds her babies. Similarly, I want to take my girlfriend out to a Chinese buffet and have her vomit the colorful contents directly into my mouth.')" id="sal" aria-label="Open item">
+            </button>
         </section>
     </main>
     <footer>
-        <h4>Spångamacka</h4>
-        <h5>By: Carl Chemnitz</h5>
+        <h1>Spångamacka</h4>
+        <h2>By: Carl Chemnitz</h5>
     </footer>
 </body>
 </html>
